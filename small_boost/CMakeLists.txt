@@ -1,0 +1,5 @@
+add_library(boost INTERFACE)
+target_include_directories(boost INTERFACE .)
+target_link_libraries(boost INTERFACE libbacktrace dl)
+target_compile_definitions(boost INTERFACE BOOST_STACKTRACE_USE_BACKTRACE)
+add_dependencies(boost libbacktrace)
