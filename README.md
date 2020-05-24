@@ -1,5 +1,5 @@
 # libbacktrace-example
-minidebuginfo example with libbacktrace &amp; boost/stacktrace
+MiniDebuginfo is GDB's feature that allows to greatly reduce executable binary size while preserving debug information needed for debugger. Basically, minidebuginfo means that debug sections from a executable were compressed with xz compression. To use them again decompression must be performed. Patch in the repository https://github.com/sargarass/libbacktrace adds such support in the libbacktrace which can be used in your codebase to get backtrace with code line/file information. For example, this library is used as backend for boost stacktrace and as part of the gcc.
 
 # Dependancies:
 1. Cmake >= 3.0
